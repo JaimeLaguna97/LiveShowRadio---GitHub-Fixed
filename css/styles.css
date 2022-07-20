@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+
+html {
+  font-size: 62.5%;
+  font-family: "Secular one", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side1 {
+  display: block;
+  width: 100%;
+}
+
+.container-img {
+  width: 100%;
+}
+
+.img-radio {
+  width: 100%;
+}
+
+.img-responsive {
+  display: none;
+}
+
+.side2 {
+  background-color: black;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nav-1 {
+  display: flex;
+  width: 100%;
+  background: black;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-1 ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-1 ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 40px 25px;
+  font-size: 1.8rem;
+}
+
+.nav-2 {
+  display: none;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 10%;
+}
+
+.img-eat {
+  width: 75%;
+}
+
+.text-about {
+  justify-content: center;
+  width: 50%;
+  border-bottom: 1px solid white;
+}
+
+.h2-about {
+  font-size: 3rem;
+  padding-top: 5%;
+}
+
+.p-about {
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+
+.footer-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-1 img {
+  width: 15%;
+}
+
+.main-gallery {
+  padding-top: 8%;
+  overflow: hidden;
+}
+
+.gallery-festivals {
+  width: 100;
+}
+
+.img-gallery {
+  width: 75%;
+  height: auto;
+}
+
+.img-gallery-container {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1278px) {
+  .row {
+    flex-direction: row;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+
+  .side1 {
+    display: flex;
+    position: fixed;
+    margin-right: 50%;
+    width: 50%;
+    height: 100%;
+  }
+
+  .img-radio {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .side2 {
+    padding: 0;
+    overflow-y: hidden;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 50%;
+  }
+
+  .nav-1 {
+    display: none;
+  }
+
+  .nav-2 {
+    display: flex;
+    width: 100%;
+    padding-top: 10%;
+  }
+
+  .nav-2 ul li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .nav-2 ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 40px;
+    font-size: 2rem;
+  }
+
+  .img-container {
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 12%;
+  }
+
+  .img-eat {
+    width: 80%;
+  }
+
+  .gallery-festivals-grid {
+    display: grid;
+  }
+
+  .gallery-festivals{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-1 {
+    width: 70%;
+    justify-content: flex-end;
+    padding-left: 15%;
+  }
+}
+
+/* animaciones */
+
+.img-container img {
+  animation: fadeinFromTop 0.5s linear forwards, floating ease 4s infinite;
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+  25% {
+    transform: translate(5%, 15%) rotate(360deg);
+  }
+  50% {
+    transform: translate(10%, 5%) rotate(360deg);
+  }
+  75% {
+    transform: translate(0%, 15%) rotate(360deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+}
+
+
+.img-gallery-container{
+  transition: 1s;
+  
+}
+
+.img-gallery-container {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.img-gallery-container:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
